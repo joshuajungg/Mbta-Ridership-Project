@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBTA Ridership Patterns: Peak vs. Off-Peak</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+        <h1>MBTA Ridership Patterns</h1>
+        <p>Joshua Jung, Gavin Perkins, Abigail Siy</p>
+    </header>
+
+    <hr>
+    <section id="intro">
+        <h2>Introduction</h2>
+      
+        <p>
+          Understanding MBTA ridership patterns is essential for improving the efficiency and accessibility of public transportation in the Greater Boston area. 
+          The Massachusetts Bay Transportation Authority (MBTA) plays a critical role in connecting communities, supporting economic mobility, and reducing urban congestion. 
+          By analyzing how ridership fluctuates between peak and off-peak hours across different commuter rail lines, this project seeks to uncover meaningful insights that can 
+          guide operational planning, scheduling decisions, and rider experience improvements.
+        </p>
+      
+        <p>
+          Monitoring commuter rail usage offers valuable insight into broader social and economic behaviors, such as daily commuting trends, demand surges during rush hours, and 
+          variability across weekdays. High ridership during peak hours may reflect concentrated commuting activity in urban cores, while off-peak patterns can highlight nontraditional 
+          usage, such as leisure travel or flexible work schedules. Evaluating these shifts can help MBTA optimize resources, reduce service gaps, and better align capacity with rider needs.
+        </p>
+      
+        <p>
+          Furthermore, a data-driven understanding of ridership patterns can help address pressing challenges like overcrowding, service reliability, and equitable access. 
+          This analysis can inform not only real-time operational decisions but also long-term infrastructure investments, especially as public transit adapts to post-pandemic usage trends.
+          By visualizing these dynamics through clear and interactive data visualizations, we aim to provide actionable insights that can support more sustainable and commuter-friendly transit solutions.
+        </p>
+      </section>
+
+      <hr>
+
+    <section id="data-intro">
+        <h2>Introduction of the Data</h2>
+      
+        <p>
+          This analysis uses the MBTA Commuter Rail Ridership dataset from the 
+          <a href="https://mbta-massdot.opendata.arcgis.com/" target="_blank">MassDOT Open Data Portal</a>. 
+          The dataset contains 9,839 rows and 13 columns, focusing specifically on Commuter Rail performance for the year 2024. 
+          It includes information on service reliability, ridership by time of day, and performance indicators across various rail lines and stations. 
+          The table below outlines the key attributes used in our analysis:
+        </p>
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Variable Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>service_date</td>
+              <td>Date of the service (YYYY-MM-DD format)</td>
+            </tr>
+            <tr>
+              <td>gtfs_route_id</td>
+              <td>Unique route identifier (e.g., CR-Providence)</td>
+            </tr>
+            <tr>
+              <td>gtfs_route_long_name</td>
+              <td>Full name of the route (e.g., Fitchburg Line)</td>
+            </tr>
+            <tr>
+              <td>mode_type</td>
+              <td>Type of transit (Commuter Rail)</td>
+            </tr>
+            <tr>
+              <td>peak_offpeak_ind</td>
+              <td>Indicator of PEAK or OFF_PEAK hour</td>
+            </tr>
+            <tr>
+              <td>metric_type</td>
+              <td>Performance metric type (e.g., Schedule Adherence)</td>
+            </tr>
+            <tr>
+              <td>otp_numerator</td>
+              <td>Number of on-time trips</td>
+            </tr>
+            <tr>
+              <td>otp_denominator</td>
+              <td>Total scheduled trips</td>
+            </tr>
+            <tr>
+              <td>cancelled_numerator</td>
+              <td>Number of cancelled trips</td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+</div>
+</body>
+</html>
