@@ -29,28 +29,31 @@
           Monitoring commuter rail usage offers valuable insight into broader social and economic behaviors, such as daily commuting trends, demand surges during rush hours, and 
           variability across weekdays. High ridership during peak hours may reflect concentrated commuting activity in urban cores, while off-peak patterns can highlight nontraditional 
           usage, such as leisure travel or flexible work schedules. Evaluating these shifts can help MBTA optimize resources, reduce service gaps, and better align capacity with rider needs.
+          As noted in <a href="https://transitcenter.org/all-ridership-is-super-local/" target="_blank">TransitCenter’s analysis</a>, ridership patterns are highly localized, shaped by neighborhood-level differences 
+          in demographics, accessibility, and alternative transportation options.
         </p>
       
         <p>
           Furthermore, a data-driven understanding of ridership patterns can help address pressing challenges like overcrowding, service reliability, and equitable access. 
           This analysis can inform not only real-time operational decisions but also long-term infrastructure investments, especially as public transit adapts to post-pandemic usage trends.
-          By visualizing these dynamics through clear and interactive data visualizations, we aim to provide actionable insights that can support more sustainable and commuter-friendly transit solutions.
+          Research such as that published in <a href="https://journals.sagepub.com/doi/10.1177/03611981241255020" target="_blank">Transportation Research Record</a> emphasizes the importance of timely, spatially-informed decision-making to improve service quality 
+          and encourage ridership growth. By visualizing these dynamics through clear and interactive data visualizations, we aim to provide actionable insights that support MBTA ridership.
         </p>
       </section>
-
+      
       <hr>
 
     <section id="data-intro">
-        <h2>Introduction of the Data</h2>
+        <h2>Introduction to the Data</h2>
       
         <p>
-          This analysis uses the MBTA Commuter Rail Ridership dataset from the 
-          <a href="https://mbta-massdot.opendata.arcgis.com/" target="_blank">MassDOT Open Data Portal</a>. 
-          The dataset contains 9,839 rows and 13 columns, focusing specifically on Commuter Rail performance for the year 2024. 
-          It includes information on service reliability, ridership by time of day, and performance indicators across various rail lines and stations. 
-          The table below outlines the key attributes used in our analysis:
-        </p>
-      
+            The dataset used in this project is a cleaned and curated version of the 
+            <a href="https://mbta-massdot.opendata.arcgis.com/datasets/b3a24561c2104422a78b593e92b566d5_0/explore" target="_blank">
+              MBTA Commuter Rail Ridership data</a> for the year 2024, 
+            prepared to support analysis of ridership trends across time and routes. 
+            It contains 9,839 observations and 10 attributes.
+          </p>
+          
         <table>
           <thead>
             <tr>
@@ -61,44 +64,61 @@
           <tbody>
             <tr>
               <td>service_date</td>
-              <td>Date of the service (YYYY-MM-DD format)</td>
+              <td>Date of the commuter rail service (YYYY-MM-DD)</td>
             </tr>
             <tr>
               <td>gtfs_route_id</td>
-              <td>Unique route identifier (e.g., CR-Providence)</td>
+              <td>Unique route ID (e.g., CR-Worcester, CR-Franklin)</td>
             </tr>
             <tr>
               <td>gtfs_route_long_name</td>
-              <td>Full name of the route (e.g., Fitchburg Line)</td>
-            </tr>
-            <tr>
-              <td>mode_type</td>
-              <td>Type of transit (Commuter Rail)</td>
+              <td>Descriptive route name (e.g., Worcester Line)</td>
             </tr>
             <tr>
               <td>peak_offpeak_ind</td>
-              <td>Indicator of PEAK or OFF_PEAK hour</td>
-            </tr>
-            <tr>
-              <td>metric_type</td>
-              <td>Performance metric type (e.g., Schedule Adherence)</td>
+              <td>Indicates if the trip occurred during PEAK or OFF_PEAK hours</td>
             </tr>
             <tr>
               <td>otp_numerator</td>
-              <td>Number of on-time trips</td>
+              <td>The number of trips that met the on-time performance</td>
             </tr>
             <tr>
               <td>otp_denominator</td>
-              <td>Total scheduled trips</td>
+              <td>The total number of trips used to calculate on-time performance for that day.</td>
             </tr>
             <tr>
               <td>cancelled_numerator</td>
-              <td>Number of cancelled trips</td>
+              <td>Number of canceled trips</td>
+            </tr>
+            <tr>
+              <td>ObjectId</td>
+              <td>Internal row identifier (used for indexing only)</td>
+            </tr>
+            <tr>
+              <td>otp_ratio</td>
+              <td>Calculated on-time reliability ratio (otp_numerator / otp_denominator)</td>
+            </tr>
+            <tr>
+              <td>service_time</td>
+              <td>Time segment of service (e.g., Morning, Evening, etc.)</td>
             </tr>
           </tbody>
         </table>
     </section>
-
+      
+    <hr>
+    
+    <div class="chart-section">
+        <h3>Overview of OTP ratio per route (2024)</h3>
+        <img src="charts/otp_ratio_by_route_horizontal.png" alt="MBTA OTP Chart" width="700" />
+        <p><strong>Takeaway:</strong> This horizontal bar chart provides a clear comparison of the average On-Time Performance (OTP) ratio across MBTA commuter rail routes in 2024. 
+            Routes like CR-Lowell and CR-Fairmount rank highest, suggesting consistent service delivery and fewer delays, which could reflect efficient scheduling, infrastructure quality, or lower congestion levels. 
+            On the other hand, routes such as CR-Middleborough and CR-Kingston display lower OTP ratios, indicating more frequent delays or inconsistencies that may negatively impact rider satisfaction. 
+            By visualizing these differences, this chart helps identify which routes are operating efficiently and which ones may require further attention, investment, or operational changes. 
+            These insights are essential for prioritizing improvements in service reliability and ensuring equitable, dependable transit access across the network.
+            </p>            
+      </div>
+      
     <hr>
 
 </div>
