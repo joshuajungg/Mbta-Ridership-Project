@@ -175,6 +175,23 @@
     
     <hr>
 
+    <div class="chart-section">
+      <h2>OTP Comparison: PEAK vs OFF-PEAK Hours By Commuter Rail</h2>
+    
+      <div style="display: flex; justify-content: center;">
+        <iframe src="charts/index.html" width="70%" height="580" style="border: 2px solid rgb(163, 152, 152); border-radius: 8px;"></iframe>
+      </div>
+    
+      <p>
+        After examining how OTP ratios differ across weekdays and weekends, we now shift our focus to the time of day services operate. 
+        This interactive chart compares <strong>On-Time Performance (OTP)</strong> across MBTA commuter rail lines during <strong>PEAK</strong> and <strong>OFF-PEAK</strong> hours.
+        Most lines show minimal difference between the two, suggesting consistent service throughout the day. However, some lines like <strong>Providence/Stoughton</strong>
+        perform slightly better during OFF-PEAK hours. This view helps pinpoint whether time of day has a significant effect on reliability.
+      </p>
+    </div>
+    
+
+    <hr>
 
     <div class="chart-section">
         <h2>Geographic Maps</h2>
@@ -188,7 +205,7 @@
         <p>
             The map describes OTP ratio for each of the commuter rail lines. The user can hover over each of the lines to see the ratio, 
             represented as a percent, of how often each train arrives on time, as per the posted schedule. The data indicates the Lowell line is the strongest,
-            with about 95.6% of arrivals being classified as on time, with the Middleborough/Lakeville line being least reliable at 85.9%. The legend indicates the color 
+            with about <strong>95.6%</strong> of arrivals being classified as on time, with the Middleborough/Lakeville line being least reliable at <strong>85.9%</strong>. The legend indicates the color 
             associated with the percentage scales.
         </p>
         <iframe src="charts/mbta_otp_map.html" width="100%" height="600" style="border:none;"></iframe>
@@ -206,11 +223,53 @@
       <div class="chart-section">
         <h3>Cancellation Rate by Route</h3>
         <p>
-            The map displays the cancellation rate for each line when the user hovers above the indicated line. The cancellation rate is low and is around 1% or 
+            The map displays the cancellation rate for each line when the user hovers above the indicated line. The cancellation rate is low and is around <strong>1%</strong> or 
             less for all lines.
         </p>
         <iframe src="charts/mbta_cancellation_map.html" width="100%" height="600" style="border:none;"></iframe>
       </div>
+
+      <hr>
+
+      <div class="chart-section">
+        <h2>Conclusion</h2>
+        <p>
+          Through a comprehensive series of data visualizations, our analysis of MBTA Commuter Rail's On-Time Performance (OTP) 
+          has revealed several important insights into the system's overall reliability. Starting with route-level comparisons, 
+          we observed that lines such as <strong>CR-Lowell</strong> and <strong>CR-Fairmount</strong> consistently perform well, 
+          while others like <strong>CR-Middleborough</strong> and <strong>CR-Kingston</strong> lag behind. This highlights the 
+          need for targeted service improvements on specific lines.
+        </p>
+      
+        <p>
+          Temporal analysis further emphasized that OTP varies modestly over time. Our <em>month-to-month</em> and 
+          <em>week-to-week</em> visualizations showed that while <strong>January</strong> and <strong>February</strong> are 
+          generally stable, months like <strong>May</strong> and <strong>June</strong> demonstrate noticeable fluctuations, 
+          likely due to operational or seasonal challenges. Understanding these trends can help transit authorities plan better 
+          during high-variability months.
+        </p>
+      
+        <p>
+          When comparing OTP ratios between <strong>weekdays</strong> and <strong>weekends</strong>, the difference was 
+          minimal—<strong>0.91</strong> on weekdays vs. <strong>0.90</strong> on weekends—suggesting consistent performance 
+          regardless of the day. Similarly, our <strong>peak vs. off-peak</strong> comparison showed relatively uniform 
+          performance throughout the day, though a few lines exhibited slight differences favoring <em>off-peak</em> reliability.
+        </p>
+      
+        <p>
+          Interactive maps further enhanced our understanding by visualizing OTP and <strong>cancellation rates</strong> across 
+          the network. These maps revealed that cancellation rates remain impressively low—typically under <strong>1%</strong>—across 
+          all lines, indicating operational consistency in service execution.
+        </p>
+      
+        <p>
+          Overall, MBTA demonstrates strong and consistent on-time performance, but some routes and time periods require focused 
+          attention. Moving forward, deeper analysis could incorporate ridership volume, weather conditions, or train-level operational data to better understand the causes behind performance gaps. 
+          Geographic expansion to include subway and bus lines could also provide a more holistic view of the MBTA network. 
+          These findings not only inform potential service adjustments and resource allocation strategies, but also emphasize the importance of data-driven decision-making in enhancing public transit reliability for the Greater Boston community.
+        </p>
+      </div>
+      <hr>
 </div>
 </body>
 </html>
