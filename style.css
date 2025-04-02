@@ -9,7 +9,7 @@ body {
   
   /* === Layout Container === */
   .container {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 40px;
     border: 4px solid black;
