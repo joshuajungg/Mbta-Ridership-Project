@@ -107,6 +107,44 @@
     </section>
       
     <hr>
+
+    <div class="chart-section">
+        <h2>Geographic Maps</h2>
+        <p>
+            The following set of visualizations focuses on a geographic perspective. 
+            By mapping key performance metrics such as on-time performance, peak versus off-peak reliability, and cancellation rates across the MBTA commuter rail network, we gain valuable insight 
+            into how service quality varies by route and location. These maps provide an intuitive, spatial understanding of operational reliability across the system.
+        </p>
+
+        <h3>On-Time Performance by Route</h3>
+        <p>
+            The map describes OTP ratio for each of the commuter rail lines. The user can hover over each of the lines to see the ratio, 
+            represented as a percent, of how often each train arrives on time, as per the posted schedule. The data indicates the Lowell line is the strongest,
+            with about <strong>95.6%</strong> of arrivals being classified as on time, with the Middleborough/Lakeville line being least reliable at <strong>85.9%</strong>. The legend indicates the color 
+            associated with the percentage scales.
+        </p>
+        <iframe src="charts/mbta_otp_map.html" width="100%" height="600" style="border:none;"></iframe>
+      </div>
+      
+      <div class="chart-section">
+        <h3>On-Time Performance During Peak vs. Off-Peak Hours</h3>
+        <p>
+            The map allows the user to click on each line to see the on-time percentages for both on-peak and off-peak hours. The data does not indicate that reliability is 
+            greater or less in both off and on-peak hours, as the percentages are relatively similar for each line. 
+        </p>
+        <iframe src="charts/mbta_peak_offpeak_map.html" width="100%" height="600" style="border:none;"></iframe>
+      </div>
+      
+      <div class="chart-section">
+        <h3>Cancellation Rate by Route</h3>
+        <p>
+            The map displays the cancellation rate for each line when the user hovers above the indicated line. The cancellation rate is low and is around <strong>1%</strong> or 
+            less for all lines.
+        </p>
+        <iframe src="charts/mbta_cancellation_map.html" width="100%" height="600" style="border:none;"></iframe>
+      </div>
+
+    <hr>
     
     <section id="otp-overview">
         <h2>Overview of OTP Ratio per Route (2024)</h2>
@@ -193,43 +231,6 @@
 
     <hr>
 
-    <div class="chart-section">
-        <h2>Geographic Maps</h2>
-        <p>
-            While previous charts explored ridership patterns through aggregated trends and time-based breakdowns, the following set of visualizations shifts the focus to a geographic perspective. 
-            By mapping key performance metrics such as on-time performance, peak versus off-peak reliability, and cancellation rates across the MBTA commuter rail network, we gain valuable insight 
-            into how service quality varies by route and location. These maps provide an intuitive, spatial understanding of operational reliability across the system.
-        </p>
-
-        <h3>On-Time Performance by Route</h3>
-        <p>
-            The map describes OTP ratio for each of the commuter rail lines. The user can hover over each of the lines to see the ratio, 
-            represented as a percent, of how often each train arrives on time, as per the posted schedule. The data indicates the Lowell line is the strongest,
-            with about <strong>95.6%</strong> of arrivals being classified as on time, with the Middleborough/Lakeville line being least reliable at <strong>85.9%</strong>. The legend indicates the color 
-            associated with the percentage scales.
-        </p>
-        <iframe src="charts/mbta_otp_map.html" width="100%" height="600" style="border:none;"></iframe>
-      </div>
-      
-      <div class="chart-section">
-        <h3>On-Time Performance During Peak vs. Off-Peak Hours</h3>
-        <p>
-            The map allows the user to click on each line to see the on-time percentages for both on-peak and off-peak hours. The data does not indicate that reliability is 
-            greater or less in both off and on-peak hours, as the percentages are relatively similar for each line. 
-        </p>
-        <iframe src="charts/mbta_peak_offpeak_map.html" width="100%" height="600" style="border:none;"></iframe>
-      </div>
-      
-      <div class="chart-section">
-        <h3>Cancellation Rate by Route</h3>
-        <p>
-            The map displays the cancellation rate for each line when the user hovers above the indicated line. The cancellation rate is low and is around <strong>1%</strong> or 
-            less for all lines.
-        </p>
-        <iframe src="charts/mbta_cancellation_map.html" width="100%" height="600" style="border:none;"></iframe>
-      </div>
-
-      <hr>
 
       <div class="chart-section">
         <h2>Conclusion</h2>
