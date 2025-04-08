@@ -1,0 +1,37 @@
+﻿Website: https://joshuajungg.github.io/Mbta-Ridership-Project/
+
+
+Website Design:
+The MBTA Ridership Project website presents a clean layout that effectively guides users through a series of data visualizations and insights. The content is contained within a centered container that provides consistent padding and spacing, ensuring a smooth reading experience. The use of clear typography and simple color choices helps maintain focus on the information rather than away from it. Section headings are easy to identify and contribute to a strong visual hierarchy, while the consistent formatting of paragraphs and lists supports readability throughout the site. Visualizations are presented in a logical sequence, each paired with descriptive explanations that help users interpret the data. Images and charts are sized appropriately to fit the available space. Flexbox styling ensures that visual content adjusts well to different screen sizes. Overall, the website design emphasizes clarity, structure, and usability. It creates a narrative flow that makes it easy to follow the analysis, from route-level comparisons to more detailed breakdowns by time and service type.
+
+
+Visualization 1: 
+The three maps depicted on the website are an integral part of the study. These maps were created in Python utilizing several libraries, most notably GeoPandas and Folium. These libraries were used to generate the interactive maps, as well as utilizing folium’s html to generate legends when necessary. The shapefile used to merge with the commuter rail dataset was sourced from the MassGIS website, a helpful tool with many geographic tools stored within it for the state of Massachusetts. The maps are built for the purpose of user interaction and allow for geographic visualization of each of the routes. 
+
+
+Map 1
+The first map showcases the OTP ratio (expressed as a percent) for each of the commuter rail lines being analyzed. The lines are color coded based on OTP reliability. The user can hover over each of the lines to see their on-time performance. The mop is also equipped with a legend for the user to reference
+
+
+Map 2. 
+The second map depicts each of the commuter rail lines within the Boston area, allowing the user to hover them, see the route name, and click to see the on-time performance of the line during both peak and off peak hours. 
+
+
+Map 3
+The third map illustrates the cancellation rate across each of the commuter rail lines. The user is able to hover over each line and see the exact cancellation rate for that respective line. A legend is also included, as each of the lines are color-coded based on cancellation rate.
+
+
+Visualization 2: 
+The bar chart has a title "Average OTP Ratio by MBTA Commuter Rail Route (2024)" and is designed to effectively communicate the on time performance (OTP) of each commuter rail route. The horizontal bars allow for easy comparison across the different routes, which are sorted in descending order to emphasize performance ranking. The x-axis is labeled as Average On-Time Performance Ratio and is scaled from 0.80 to just above 1.0, which zooms in on the relevant range of data. All bars are presented in a color blue, ensuring visual consistency and keeping the focus on the length of each bar rather than color differences. The minimalist design helps maintain a clean and readable aesthetic. Overall, the visualization is simple yet effective, making it easy for viewers to identify top-performing lines and spot gaps in service reliability at a glance.
+
+
+Visualization 3: 
+This interactive line chart visualizes the average OTP ratio by week for each month of the year. Altair was utilized to create the chart, and it enables users to view trends across all months or select a specific month to focus on. The x-axis represents the numbered weeks within a month, while the y-axis displays the OTP ratio, ranging from 0.8 to 1.0. A legend on the side shows each month in a different shade of blue, where the shades become darker as the months go from January to December. This design allows users to explore both week-by-week performance within individual months and broader OTP trends across the entire year
+
+
+Visualization 4: 
+This boxplot visualizes the OTP distribution based on the day of the week (weekday vs. weekend). The chart was created using Seaborn and Matplotlib to highlight the variability in OTP depending on the day of service. The y-axis represents the OTP ratio, ranging from 0.0 to 1.0, while the x-axis categorizes the data into "Weekday" and "Weekend". Each box displays the range, median, upper and lower quartiles, and outliers, allowing for a clear comparison of performance consistency between weekdays and weekends.
+
+
+Visualization 5: 
+The D3 bar chart compares the on-time performance (OTP) of MBTA commuter rail lines during both off and on-peak hours. The commuter rail lines are labeled horizontally along the x-axis, with the y-axis representing the on-time performance ratio (expressed as a percentage). When the user hovers over a bar, a tooltip is displayed showcasing the commuter rail line along with its specific percentage. This visualization makes it easy to visualize how time of day impacts performance for each of the commuter rail routes. Additionally, users can visualize any discrepancies between peak and off-peak hour service. The D3 visualization, with interactive features added, allows the user to engage with the visual.
