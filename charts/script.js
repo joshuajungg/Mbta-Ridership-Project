@@ -14,6 +14,8 @@ d3.csv("data.csv").then(data => {
     d.OFF_PEAK = +d.OFF_PEAK;
   });
 
+  data.sort((a, b) => d3.ascending(a.gtfs_route_long_name, b.gtfs_route_long_name));
+
   const routes = data.map(d => d.gtfs_route_long_name);
   const subgroups = ["PEAK", "OFF_PEAK"];
 
@@ -107,6 +109,7 @@ d3.csv("data.csv").then(data => {
     .style("font-size", "13px")
     .attr("alignment-baseline", "middle");
 });
+
 
 
 
