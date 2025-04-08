@@ -21,7 +21,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  
+ 
+
   /* === Header === */
   header p {
     text-align: center;
